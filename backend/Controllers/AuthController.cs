@@ -19,12 +19,12 @@ namespace DockerApp.Controllers
     {
         private readonly AppDbContext _context;
         private readonly IConfiguration _config;
-        //private readonly RedisService _redis;
-        public AuthController(AppDbContext context, IConfiguration config )
+        private readonly RedisService _redis;
+        public AuthController(AppDbContext context, IConfiguration config , RedisService redis)
         {
             _context = context;
             _config = config;
-            //_redis = redis;
+            _redis = redis;
         }
         [Authorize(Roles = "HR")]
         [HttpPost("register")]
@@ -53,7 +53,7 @@ namespace DockerApp.Controllers
 
                 _context.Users.Add(user);
                 _context.SaveChanges();
-                //await _redis.RemoveAsync("users:all");
+                await _redis.RemoveAsync("users:all");
 
                 Log.Information("User {Email} registered successfully with role {Role}", user.Email, user.Role);
 
@@ -107,7 +107,7 @@ namespace DockerApp.Controllers
                 var cacheKey = $"user:{user.Id}";
                 var cacheValue = System.Text.Json.JsonSerializer.Serialize(safeUser);
 
-               // await _redis.SetAsync(cacheKey, cacheValue, TimeSpan.FromMinutes(10));
+                await _redis.SetAsync(cacheKey, cacheValue, TimeSpan.FromMinutes(10));
 
                 Log.Information("User {Email} cached in Redis", user.Email);
 

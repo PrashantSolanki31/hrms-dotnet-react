@@ -15,12 +15,12 @@ namespace DockerApp.Controllers
     public class UsersController : ControllerBase
     {
         private readonly AppDbContext _context;
-        //private readonly RedisService _redis;
+        private readonly RedisService _redis;
 
-        public UsersController(AppDbContext context)
+        public UsersController(AppDbContext context, RedisService redis)
         {
             _context = context;
-            //_redis = redis;
+            _redis = redis;
         }
 
         [Authorize(Roles = "HR")]
@@ -29,15 +29,15 @@ namespace DockerApp.Controllers
         {
             string cacheKey = "users:all";
 
-            // 1. CHECK CACHE
-          //  var cachedData = await _redis.GetAsync(cacheKey);
+           // 1.CHECK CACHE
+           var cachedData = await _redis.GetAsync(cacheKey);
 
-            //if (!string.IsNullOrEmpty(cachedData))
-            //{
-            //    Console.WriteLine("🔥 CACHE HIT (users:all)");
-            //    var cachedUsers = JsonSerializer.Deserialize<List<User>>(cachedData);
-            //    return Ok(cachedUsers);
-            //}
+            if (!string.IsNullOrEmpty(cachedData))
+            {
+                Console.WriteLine("🔥 CACHE HIT (users:all)");
+                var cachedUsers = JsonSerializer.Deserialize<List<User>>(cachedData);
+                return Ok(cachedUsers);
+            }
             Console.WriteLine("❌ CACHE MISS (users:all) → Fetching from DB");
             // 2. DB FETCH
             var users = await _context.Users.ToListAsync();
@@ -45,11 +45,11 @@ namespace DockerApp.Controllers
             // 3. STORE IN CACHE
             var json = JsonSerializer.Serialize(users);
 
-            //await _redis.SetAsync(
-            //    cacheKey,
-            //    json,
-            //    TimeSpan.FromMinutes(5)
-            //);
+            await _redis.SetAsync(
+                cacheKey,
+                json,
+                TimeSpan.FromMinutes(5)
+            );
 
             return Ok(users);
         }
