@@ -22,7 +22,7 @@ public static class ServiceExtensions
                 {
                     mysqlOptions.EnableRetryOnFailure();
                 }));
-        //services.AddSingleton<RedisService>();
+        services.AddSingleton<RedisService>();
         // Controllers
         services.AddControllers();
 
