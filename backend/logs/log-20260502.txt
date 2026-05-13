@@ -1,0 +1,679 @@
+2026-05-02 00:08:48.434 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-05-02 00:08:48.493 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT GET_LOCK('__MyAppDb_EFMigrationsLock', 259200)
+2026-05-02 00:08:48.595 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS `__EFMigrationsHistory` (
+    `MigrationId` varchar(150) CHARACTER SET utf8mb4 NOT NULL,
+    `ProductVersion` varchar(32) CHARACTER SET utf8mb4 NOT NULL,
+    CONSTRAINT `PK___EFMigrationsHistory` PRIMARY KEY (`MigrationId`)
+) CHARACTER SET=utf8mb4;
+2026-05-02 00:08:48.627 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='MyAppDb' AND TABLE_NAME='__EFMigrationsHistory';
+2026-05-02 00:08:48.640 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `MigrationId`, `ProductVersion`
+FROM `__EFMigrationsHistory`
+ORDER BY `MigrationId`;
+2026-05-02 00:08:48.654 +05:30 [INF] No migrations were applied. The database is already up to date.
+2026-05-02 00:08:48.661 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT RELEASE_LOCK('__MyAppDb_EFMigrationsLock')
+2026-05-02 00:08:51.440 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Users` AS `u`
+    WHERE `u`.`Role` = 'HR')
+2026-05-02 00:08:51.512 +05:30 [INF] User profile is available. Using 'C:\Users\hgf\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-05-02 00:08:51.896 +05:30 [INF] Now listening on: https://localhost:7233
+2026-05-02 00:08:51.900 +05:30 [INF] Now listening on: http://localhost:5299
+2026-05-02 00:08:52.028 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-02 00:08:52.030 +05:30 [INF] Hosting environment: Development
+2026-05-02 00:08:52.032 +05:30 [INF] Content root path: C:\Users\hgf\Desktop\Study\DockerApp\backend
+2026-05-02 00:09:19.542 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-05-02 00:09:19.591 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT GET_LOCK('__MyAppDb_EFMigrationsLock', 259200)
+2026-05-02 00:09:19.664 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS `__EFMigrationsHistory` (
+    `MigrationId` varchar(150) CHARACTER SET utf8mb4 NOT NULL,
+    `ProductVersion` varchar(32) CHARACTER SET utf8mb4 NOT NULL,
+    CONSTRAINT `PK___EFMigrationsHistory` PRIMARY KEY (`MigrationId`)
+) CHARACTER SET=utf8mb4;
+2026-05-02 00:09:19.697 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='MyAppDb' AND TABLE_NAME='__EFMigrationsHistory';
+2026-05-02 00:09:19.706 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `MigrationId`, `ProductVersion`
+FROM `__EFMigrationsHistory`
+ORDER BY `MigrationId`;
+2026-05-02 00:09:19.719 +05:30 [INF] No migrations were applied. The database is already up to date.
+2026-05-02 00:09:19.724 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT RELEASE_LOCK('__MyAppDb_EFMigrationsLock')
+2026-05-02 00:09:19.905 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Users` AS `u`
+    WHERE `u`.`Role` = 'HR')
+2026-05-02 00:09:19.954 +05:30 [INF] User profile is available. Using 'C:\Users\hgf\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-05-02 00:09:20.104 +05:30 [INF] Now listening on: https://localhost:7233
+2026-05-02 00:09:20.106 +05:30 [INF] Now listening on: http://localhost:5299
+2026-05-02 00:09:20.159 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-02 00:09:20.161 +05:30 [INF] Hosting environment: Development
+2026-05-02 00:09:20.162 +05:30 [INF] Content root path: C:\Users\hgf\Desktop\Study\DockerApp\backend
+2026-05-02 00:12:26.897 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/auth/register - null null
+2026-05-02 00:12:27.232 +05:30 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2026-05-02 00:12:27.235 +05:30 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2026-05-02 00:12:27.241 +05:30 [INF] HTTP GET /api/auth/register responded 405 in 105.6982 ms
+2026-05-02 00:12:27.269 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/auth/register - 405 null null 388.8821ms
+2026-05-02 00:12:45.138 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5299/api/auth/register - application/json 88
+2026-05-02 00:12:45.264 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '4/23/2026 10:26:41 AM', Current time (UTC): '5/1/2026 6:42:45 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-05-02 00:12:45.315 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '4/23/2026 10:26:41 AM', Current time (UTC): '5/1/2026 6:42:45 PM'.
+2026-05-02 00:12:45.318 +05:30 [INF] Executing endpoint 'DockerApp.Controllers.AuthController.Register (DockerApp)'
+2026-05-02 00:12:45.348 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(DockerApp.DTO.RegisterDTO) on controller DockerApp.Controllers.AuthController (DockerApp).
+2026-05-02 00:12:45.422 +05:30 [INF] Registration attempt for prashant2@gmail.com
+2026-05-02 00:12:45.608 +05:30 [INF] Executed DbCommand (36ms) [Parameters=[@__registerDTO_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`Email`, `u`.`Name`, `u`.`Password`, `u`.`Role`
+FROM `Users` AS `u`
+WHERE `u`.`Email` = @__registerDTO_Email_0
+LIMIT 1
+2026-05-02 00:12:46.445 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Users` (`Email`, `Name`, `Password`, `Role`)
+VALUES (@p0, @p1, @p2, @p3);
+SELECT `Id`
+FROM `Users`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2026-05-02 00:12:46.482 +05:30 [INF] User prashant2@gmail.com registered successfully with role Employee
+2026-05-02 00:12:46.493 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-05-02 00:12:46.507 +05:30 [INF] Executed action DockerApp.Controllers.AuthController.Register (DockerApp) in 1147.5921ms
+2026-05-02 00:12:46.510 +05:30 [INF] Executed endpoint 'DockerApp.Controllers.AuthController.Register (DockerApp)'
+2026-05-02 00:12:46.512 +05:30 [INF] HTTP POST /api/auth/register responded 200 in 1361.2942 ms
+2026-05-02 00:12:46.523 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5299/api/auth/register - 200 null application/json; charset=utf-8 1385.6175ms
+2026-05-02 00:13:23.159 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5299/api/auth/login - application/json 65
+2026-05-02 00:13:23.170 +05:30 [INF] Executing endpoint 'DockerApp.Controllers.AuthController.Login (DockerApp)'
+2026-05-02 00:13:23.177 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DockerApp.Requests.LoginRequest) on controller DockerApp.Controllers.AuthController (DockerApp).
+2026-05-02 00:13:23.211 +05:30 [INF] Login attempt for user admin@gmail.com
+2026-05-02 00:13:23.365 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__loginRequest_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`Email`, `u`.`Name`, `u`.`Password`, `u`.`Role`
+FROM `Users` AS `u`
+WHERE `u`.`Email` = @__loginRequest_Email_0
+LIMIT 1
+2026-05-02 00:13:24.058 +05:30 [INF] User admin@gmail.com logged in successfully
+2026-05-02 00:13:24.061 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-05-02 00:13:24.066 +05:30 [INF] Executed action DockerApp.Controllers.AuthController.Login (DockerApp) in 885.1887ms
+2026-05-02 00:13:24.070 +05:30 [INF] Executed endpoint 'DockerApp.Controllers.AuthController.Login (DockerApp)'
+2026-05-02 00:13:24.072 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 906.8150 ms
+2026-05-02 00:13:24.076 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5299/api/auth/login - 200 null application/json; charset=utf-8 916.7881ms
+2026-05-02 00:13:38.608 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/users - null null
+2026-05-02 00:13:38.615 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '4/23/2026 10:36:33 AM', Current time (UTC): '5/1/2026 6:43:38 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-05-02 00:13:38.619 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '4/23/2026 10:36:33 AM', Current time (UTC): '5/1/2026 6:43:38 PM'.
+2026-05-02 00:13:38.633 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (HR)
+2026-05-02 00:13:38.648 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-05-02 00:13:38.650 +05:30 [INF] HTTP GET /api/users responded 401 in 36.7718 ms
+2026-05-02 00:13:38.654 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/users - 401 0 null 46.23ms
+2026-05-02 00:13:39.452 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/users - null null
+2026-05-02 00:13:39.459 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '4/23/2026 10:36:33 AM', Current time (UTC): '5/1/2026 6:43:39 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-05-02 00:13:39.463 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '4/23/2026 10:36:33 AM', Current time (UTC): '5/1/2026 6:43:39 PM'.
+2026-05-02 00:13:39.466 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (HR)
+2026-05-02 00:13:39.469 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-05-02 00:13:39.471 +05:30 [INF] HTTP GET /api/users responded 401 in 13.2929 ms
+2026-05-02 00:13:39.475 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/users - 401 0 null 22.6554ms
+2026-05-02 00:13:39.640 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/users - null null
+2026-05-02 00:13:39.646 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '4/23/2026 10:36:33 AM', Current time (UTC): '5/1/2026 6:43:39 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-05-02 00:13:39.649 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '4/23/2026 10:36:33 AM', Current time (UTC): '5/1/2026 6:43:39 PM'.
+2026-05-02 00:13:39.653 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (HR)
+2026-05-02 00:13:39.655 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-05-02 00:13:39.656 +05:30 [INF] HTTP GET /api/users responded 401 in 11.4595 ms
+2026-05-02 00:13:39.659 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/users - 401 0 null 18.9117ms
+2026-05-02 00:13:39.819 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/users - null null
+2026-05-02 00:13:39.827 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '4/23/2026 10:36:33 AM', Current time (UTC): '5/1/2026 6:43:39 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-05-02 00:13:39.831 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '4/23/2026 10:36:33 AM', Current time (UTC): '5/1/2026 6:43:39 PM'.
+2026-05-02 00:13:39.834 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (HR)
+2026-05-02 00:13:39.836 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-05-02 00:13:39.838 +05:30 [INF] HTTP GET /api/users responded 401 in 12.8201 ms
+2026-05-02 00:13:39.842 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/users - 401 0 null 23.165ms
+2026-05-02 00:13:39.974 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/users - null null
+2026-05-02 00:13:39.979 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '4/23/2026 10:36:33 AM', Current time (UTC): '5/1/2026 6:43:39 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-05-02 00:13:39.983 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '4/23/2026 10:36:33 AM', Current time (UTC): '5/1/2026 6:43:39 PM'.
+2026-05-02 00:13:39.985 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (HR)
+2026-05-02 00:13:39.986 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-05-02 00:13:39.988 +05:30 [INF] HTTP GET /api/users responded 401 in 9.9255 ms
+2026-05-02 00:13:39.992 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/users - 401 0 null 18.229ms
+2026-05-02 00:14:02.113 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/users - null null
+2026-05-02 00:14:02.136 +05:30 [INF] Executing endpoint 'DockerApp.Controllers.UsersController.GetUsers (DockerApp)'
+2026-05-02 00:14:02.139 +05:30 [INF] Route matched with {action = "GetUsers", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUsers() on controller DockerApp.Controllers.UsersController (DockerApp).
+2026-05-02 00:14:02.172 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`Email`, `u`.`Name`, `u`.`Password`, `u`.`Role`
+FROM `Users` AS `u`
+2026-05-02 00:14:02.179 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DockerApp.Model.User, DockerApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-02 00:14:02.185 +05:30 [INF] Executed action DockerApp.Controllers.UsersController.GetUsers (DockerApp) in 42.725ms
+2026-05-02 00:14:02.189 +05:30 [INF] Executed endpoint 'DockerApp.Controllers.UsersController.GetUsers (DockerApp)'
+2026-05-02 00:14:02.192 +05:30 [INF] HTTP GET /api/users responded 200 in 71.7230 ms
+2026-05-02 00:14:02.197 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/users - 200 null application/json; charset=utf-8 84.2849ms
+2026-05-02 00:14:26.529 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5299/api/auth/login - application/json 72
+2026-05-02 00:14:26.535 +05:30 [INF] Executing endpoint 'DockerApp.Controllers.AuthController.Login (DockerApp)'
+2026-05-02 00:14:26.538 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DockerApp.Requests.LoginRequest) on controller DockerApp.Controllers.AuthController (DockerApp).
+2026-05-02 00:14:26.562 +05:30 [INF] Login attempt for user prashant2@gmail.com
+2026-05-02 00:14:26.570 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__loginRequest_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`Email`, `u`.`Name`, `u`.`Password`, `u`.`Role`
+FROM `Users` AS `u`
+WHERE `u`.`Email` = @__loginRequest_Email_0
+LIMIT 1
+2026-05-02 00:14:26.779 +05:30 [INF] User prashant2@gmail.com logged in successfully
+2026-05-02 00:14:26.781 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-05-02 00:14:26.784 +05:30 [INF] Executed action DockerApp.Controllers.AuthController.Login (DockerApp) in 241.5513ms
+2026-05-02 00:14:26.787 +05:30 [INF] Executed endpoint 'DockerApp.Controllers.AuthController.Login (DockerApp)'
+2026-05-02 00:14:26.789 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 254.1676 ms
+2026-05-02 00:14:26.796 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5299/api/auth/login - 200 null application/json; charset=utf-8 266.4431ms
+2026-05-02 00:14:36.925 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/users - null null
+2026-05-02 00:14:36.931 +05:30 [INF] Executing endpoint 'DockerApp.Controllers.UsersController.GetUsers (DockerApp)'
+2026-05-02 00:14:36.933 +05:30 [INF] Route matched with {action = "GetUsers", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUsers() on controller DockerApp.Controllers.UsersController (DockerApp).
+2026-05-02 00:14:36.955 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`Email`, `u`.`Name`, `u`.`Password`, `u`.`Role`
+FROM `Users` AS `u`
+2026-05-02 00:14:36.960 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DockerApp.Model.User, DockerApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-02 00:14:36.963 +05:30 [INF] Executed action DockerApp.Controllers.UsersController.GetUsers (DockerApp) in 25.7813ms
+2026-05-02 00:14:36.965 +05:30 [INF] Executed endpoint 'DockerApp.Controllers.UsersController.GetUsers (DockerApp)'
+2026-05-02 00:14:36.967 +05:30 [INF] HTTP GET /api/users responded 200 in 37.3052 ms
+2026-05-02 00:14:36.972 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/users - 200 null application/json; charset=utf-8 46.8105ms
+2026-05-02 00:14:37.394 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/users - null null
+2026-05-02 00:14:37.401 +05:30 [INF] Executing endpoint 'DockerApp.Controllers.UsersController.GetUsers (DockerApp)'
+2026-05-02 00:14:37.403 +05:30 [INF] Route matched with {action = "GetUsers", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUsers() on controller DockerApp.Controllers.UsersController (DockerApp).
+2026-05-02 00:14:37.419 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`Email`, `u`.`Name`, `u`.`Password`, `u`.`Role`
+FROM `Users` AS `u`
+2026-05-02 00:14:37.423 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DockerApp.Model.User, DockerApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-02 00:14:37.426 +05:30 [INF] Executed action DockerApp.Controllers.UsersController.GetUsers (DockerApp) in 18.7766ms
+2026-05-02 00:14:37.429 +05:30 [INF] Executed endpoint 'DockerApp.Controllers.UsersController.GetUsers (DockerApp)'
+2026-05-02 00:14:37.431 +05:30 [INF] HTTP GET /api/users responded 200 in 30.3854 ms
+2026-05-02 00:14:37.434 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/users - 200 null application/json; charset=utf-8 39.4359ms
+2026-05-02 00:14:37.582 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/users - null null
+2026-05-02 00:14:37.587 +05:30 [INF] Executing endpoint 'DockerApp.Controllers.UsersController.GetUsers (DockerApp)'
+2026-05-02 00:14:37.588 +05:30 [INF] Route matched with {action = "GetUsers", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUsers() on controller DockerApp.Controllers.UsersController (DockerApp).
+2026-05-02 00:14:37.602 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`Email`, `u`.`Name`, `u`.`Password`, `u`.`Role`
+FROM `Users` AS `u`
+2026-05-02 00:14:37.606 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DockerApp.Model.User, DockerApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-02 00:14:37.608 +05:30 [INF] Executed action DockerApp.Controllers.UsersController.GetUsers (DockerApp) in 17.0228ms
+2026-05-02 00:14:37.611 +05:30 [INF] Executed endpoint 'DockerApp.Controllers.UsersController.GetUsers (DockerApp)'
+2026-05-02 00:14:37.612 +05:30 [INF] HTTP GET /api/users responded 200 in 26.1475 ms
+2026-05-02 00:14:37.616 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/users - 200 null application/json; charset=utf-8 34.1677ms
+2026-05-02 00:14:37.766 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/users - null null
+2026-05-02 00:14:37.772 +05:30 [INF] Executing endpoint 'DockerApp.Controllers.UsersController.GetUsers (DockerApp)'
+2026-05-02 00:14:37.774 +05:30 [INF] Route matched with {action = "GetUsers", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUsers() on controller DockerApp.Controllers.UsersController (DockerApp).
+2026-05-02 00:14:37.791 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`Email`, `u`.`Name`, `u`.`Password`, `u`.`Role`
+FROM `Users` AS `u`
+2026-05-02 00:14:37.796 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DockerApp.Model.User, DockerApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-02 00:14:37.799 +05:30 [INF] Executed action DockerApp.Controllers.UsersController.GetUsers (DockerApp) in 21.0563ms
+2026-05-02 00:14:37.802 +05:30 [INF] Executed endpoint 'DockerApp.Controllers.UsersController.GetUsers (DockerApp)'
+2026-05-02 00:14:37.804 +05:30 [INF] HTTP GET /api/users responded 200 in 32.8525 ms
+2026-05-02 00:14:37.809 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/users - 200 null application/json; charset=utf-8 42.7531ms
+2026-05-02 00:14:37.967 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/users - null null
+2026-05-02 00:14:37.972 +05:30 [INF] Executing endpoint 'DockerApp.Controllers.UsersController.GetUsers (DockerApp)'
+2026-05-02 00:14:37.974 +05:30 [INF] Route matched with {action = "GetUsers", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUsers() on controller DockerApp.Controllers.UsersController (DockerApp).
+2026-05-02 00:14:37.987 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`Email`, `u`.`Name`, `u`.`Password`, `u`.`Role`
+FROM `Users` AS `u`
+2026-05-02 00:14:37.990 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DockerApp.Model.User, DockerApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-02 00:14:37.993 +05:30 [INF] Executed action DockerApp.Controllers.UsersController.GetUsers (DockerApp) in 16.3394ms
+2026-05-02 00:14:37.995 +05:30 [INF] Executed endpoint 'DockerApp.Controllers.UsersController.GetUsers (DockerApp)'
+2026-05-02 00:14:37.997 +05:30 [INF] HTTP GET /api/users responded 200 in 25.2318 ms
+2026-05-02 00:14:38.000 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/users - 200 null application/json; charset=utf-8 33.2546ms
+2026-05-02 00:14:38.153 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/users - null null
+2026-05-02 00:14:38.160 +05:30 [INF] Executing endpoint 'DockerApp.Controllers.UsersController.GetUsers (DockerApp)'
+2026-05-02 00:14:38.162 +05:30 [INF] Route matched with {action = "GetUsers", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUsers() on controller DockerApp.Controllers.UsersController (DockerApp).
+2026-05-02 00:14:38.178 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`Email`, `u`.`Name`, `u`.`Password`, `u`.`Role`
+FROM `Users` AS `u`
+2026-05-02 00:14:38.183 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DockerApp.Model.User, DockerApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-05-02 00:14:38.186 +05:30 [INF] Executed action DockerApp.Controllers.UsersController.GetUsers (DockerApp) in 19.8949ms
+2026-05-02 00:14:38.189 +05:30 [INF] Executed endpoint 'DockerApp.Controllers.UsersController.GetUsers (DockerApp)'
+2026-05-02 00:14:38.191 +05:30 [INF] HTTP GET /api/users responded 200 in 31.3556 ms
+2026-05-02 00:14:38.194 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/users - 200 null application/json; charset=utf-8 41.0439ms
+2026-05-02 00:14:40.688 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/users - null null
+2026-05-02 00:14:40.695 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (HR)
+2026-05-02 00:14:40.701 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-05-02 00:14:40.704 +05:30 [INF] HTTP GET /api/users responded 403 in 9.3349 ms
+2026-05-02 00:14:40.707 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/users - 403 0 null 19.2817ms
+2026-05-02 00:14:48.609 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5299/api/auth/register - application/json 88
+2026-05-02 00:14:48.617 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '4/23/2026 10:26:41 AM', Current time (UTC): '5/1/2026 6:44:48 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-05-02 00:14:48.622 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '4/23/2026 10:26:41 AM', Current time (UTC): '5/1/2026 6:44:48 PM'.
+2026-05-02 00:14:48.625 +05:30 [INF] Executing endpoint 'DockerApp.Controllers.AuthController.Register (DockerApp)'
+2026-05-02 00:14:48.627 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(DockerApp.DTO.RegisterDTO) on controller DockerApp.Controllers.AuthController (DockerApp).
+2026-05-02 00:14:48.642 +05:30 [INF] Registration attempt for prashant2@gmail.com
+2026-05-02 00:14:48.646 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__registerDTO_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`Email`, `u`.`Name`, `u`.`Password`, `u`.`Role`
+FROM `Users` AS `u`
+WHERE `u`.`Email` = @__registerDTO_Email_0
+LIMIT 1
+2026-05-02 00:14:48.651 +05:30 [WRN] Registration failed: User already exists prashant2@gmail.com
+2026-05-02 00:14:48.654 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-05-02 00:14:48.658 +05:30 [INF] Executed action DockerApp.Controllers.AuthController.Register (DockerApp) in 27.5871ms
+2026-05-02 00:14:48.662 +05:30 [INF] Executed endpoint 'DockerApp.Controllers.AuthController.Register (DockerApp)'
+2026-05-02 00:14:48.664 +05:30 [INF] HTTP POST /api/auth/register responded 400 in 47.4624 ms
+2026-05-02 00:14:48.669 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5299/api/auth/register - 400 null text/plain; charset=utf-8 59.6325ms
+2026-05-02 00:14:52.129 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5299/api/auth/register - application/json 88
+2026-05-02 00:14:52.136 +05:30 [INF] Executing endpoint 'DockerApp.Controllers.AuthController.Register (DockerApp)'
+2026-05-02 00:14:52.139 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(DockerApp.DTO.RegisterDTO) on controller DockerApp.Controllers.AuthController (DockerApp).
+2026-05-02 00:14:52.165 +05:30 [INF] Registration attempt for prashant2@gmail.com
+2026-05-02 00:14:52.172 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__registerDTO_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`Email`, `u`.`Name`, `u`.`Password`, `u`.`Role`
+FROM `Users` AS `u`
+WHERE `u`.`Email` = @__registerDTO_Email_0
+LIMIT 1
+2026-05-02 00:14:52.179 +05:30 [WRN] Registration failed: User already exists prashant2@gmail.com
+2026-05-02 00:14:52.182 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-05-02 00:14:52.185 +05:30 [INF] Executed action DockerApp.Controllers.AuthController.Register (DockerApp) in 41.5311ms
+2026-05-02 00:14:52.189 +05:30 [INF] Executed endpoint 'DockerApp.Controllers.AuthController.Register (DockerApp)'
+2026-05-02 00:14:52.192 +05:30 [INF] HTTP POST /api/auth/register responded 400 in 56.7623 ms
+2026-05-02 00:14:52.197 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5299/api/auth/register - 400 null text/plain; charset=utf-8 67.539ms
+2026-05-02 00:14:53.403 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5299/api/auth/register - application/json 88
+2026-05-02 00:14:53.409 +05:30 [INF] Executing endpoint 'DockerApp.Controllers.AuthController.Register (DockerApp)'
+2026-05-02 00:14:53.411 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(DockerApp.DTO.RegisterDTO) on controller DockerApp.Controllers.AuthController (DockerApp).
+2026-05-02 00:14:53.425 +05:30 [INF] Registration attempt for prashant2@gmail.com
+2026-05-02 00:14:53.429 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__registerDTO_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`Email`, `u`.`Name`, `u`.`Password`, `u`.`Role`
+FROM `Users` AS `u`
+WHERE `u`.`Email` = @__registerDTO_Email_0
+LIMIT 1
+2026-05-02 00:14:53.433 +05:30 [WRN] Registration failed: User already exists prashant2@gmail.com
+2026-05-02 00:14:53.435 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-05-02 00:14:53.438 +05:30 [INF] Executed action DockerApp.Controllers.AuthController.Register (DockerApp) in 22.8374ms
+2026-05-02 00:14:53.441 +05:30 [INF] Executed endpoint 'DockerApp.Controllers.AuthController.Register (DockerApp)'
+2026-05-02 00:14:53.443 +05:30 [INF] HTTP POST /api/auth/register responded 400 in 33.9279 ms
+2026-05-02 00:14:53.447 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5299/api/auth/register - 400 null text/plain; charset=utf-8 43.5941ms
+2026-05-02 00:14:59.888 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5299/api/auth/register - application/json 90
+2026-05-02 00:14:59.895 +05:30 [INF] Executing endpoint 'DockerApp.Controllers.AuthController.Register (DockerApp)'
+2026-05-02 00:14:59.897 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(DockerApp.DTO.RegisterDTO) on controller DockerApp.Controllers.AuthController (DockerApp).
+2026-05-02 00:14:59.914 +05:30 [INF] Registration attempt for prashant23@gmail.com
+2026-05-02 00:14:59.918 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__registerDTO_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`Email`, `u`.`Name`, `u`.`Password`, `u`.`Role`
+FROM `Users` AS `u`
+WHERE `u`.`Email` = @__registerDTO_Email_0
+LIMIT 1
+2026-05-02 00:15:00.164 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Users` (`Email`, `Name`, `Password`, `Role`)
+VALUES (@p0, @p1, @p2, @p3);
+SELECT `Id`
+FROM `Users`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2026-05-02 00:15:00.171 +05:30 [INF] User prashant23@gmail.com registered successfully with role Employee
+2026-05-02 00:15:00.174 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-05-02 00:15:00.177 +05:30 [INF] Executed action DockerApp.Controllers.AuthController.Register (DockerApp) in 276.1122ms
+2026-05-02 00:15:00.180 +05:30 [INF] Executed endpoint 'DockerApp.Controllers.AuthController.Register (DockerApp)'
+2026-05-02 00:15:00.183 +05:30 [INF] HTTP POST /api/auth/register responded 200 in 288.2626 ms
+2026-05-02 00:15:00.187 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5299/api/auth/register - 200 null application/json; charset=utf-8 298.3122ms
+2026-05-02 00:16:19.223 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-05-02 00:16:19.302 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT GET_LOCK('__MyAppDb_EFMigrationsLock', 259200)
+2026-05-02 00:16:19.397 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS `__EFMigrationsHistory` (
+    `MigrationId` varchar(150) CHARACTER SET utf8mb4 NOT NULL,
+    `ProductVersion` varchar(32) CHARACTER SET utf8mb4 NOT NULL,
+    CONSTRAINT `PK___EFMigrationsHistory` PRIMARY KEY (`MigrationId`)
+) CHARACTER SET=utf8mb4;
+2026-05-02 00:16:19.424 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='MyAppDb' AND TABLE_NAME='__EFMigrationsHistory';
+2026-05-02 00:16:19.432 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `MigrationId`, `ProductVersion`
+FROM `__EFMigrationsHistory`
+ORDER BY `MigrationId`;
+2026-05-02 00:16:19.446 +05:30 [INF] No migrations were applied. The database is already up to date.
+2026-05-02 00:16:19.458 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT RELEASE_LOCK('__MyAppDb_EFMigrationsLock')
+2026-05-02 00:16:19.692 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Users` AS `u`
+    WHERE `u`.`Role` = 'HR')
+2026-05-02 00:16:19.738 +05:30 [INF] User profile is available. Using 'C:\Users\hgf\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-05-02 00:16:19.890 +05:30 [INF] Now listening on: https://localhost:7233
+2026-05-02 00:16:19.892 +05:30 [INF] Now listening on: http://localhost:5299
+2026-05-02 00:16:19.943 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-02 00:16:19.944 +05:30 [INF] Hosting environment: Development
+2026-05-02 00:16:19.945 +05:30 [INF] Content root path: C:\Users\hgf\Desktop\Study\DockerApp\backend
+2026-05-02 00:16:23.470 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5299/api/auth/register - application/json 90
+2026-05-02 00:16:23.722 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (HR)
+2026-05-02 00:16:23.728 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-05-02 00:16:23.733 +05:30 [INF] HTTP POST /api/auth/register responded 403 in 192.6388 ms
+2026-05-02 00:16:23.757 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5299/api/auth/register - 403 0 null 297.6949ms
+2026-05-02 00:16:24.406 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5299/api/auth/register - application/json 90
+2026-05-02 00:16:24.418 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (HR)
+2026-05-02 00:16:24.421 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-05-02 00:16:24.423 +05:30 [INF] HTTP POST /api/auth/register responded 403 in 9.6428 ms
+2026-05-02 00:16:24.428 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5299/api/auth/register - 403 0 null 22.0631ms
+2026-05-02 00:16:24.727 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5299/api/auth/register - application/json 90
+2026-05-02 00:16:24.738 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (HR)
+2026-05-02 00:16:24.742 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-05-02 00:16:24.744 +05:30 [INF] HTTP POST /api/auth/register responded 403 in 10.3119 ms
+2026-05-02 00:16:24.749 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5299/api/auth/register - 403 0 null 21.6773ms
+2026-05-02 00:16:24.930 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5299/api/auth/register - application/json 90
+2026-05-02 00:16:24.936 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (HR)
+2026-05-02 00:16:24.938 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-05-02 00:16:24.941 +05:30 [INF] HTTP POST /api/auth/register responded 403 in 5.4542 ms
+2026-05-02 00:16:24.945 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5299/api/auth/register - 403 0 null 15.7444ms
+2026-05-02 00:16:25.103 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5299/api/auth/register - application/json 90
+2026-05-02 00:16:25.108 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (HR)
+2026-05-02 00:16:25.110 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-05-02 00:16:25.112 +05:30 [INF] HTTP POST /api/auth/register responded 403 in 4.0641 ms
+2026-05-02 00:16:25.116 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5299/api/auth/register - 403 0 null 13.0449ms
+2026-05-02 00:16:25.290 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5299/api/auth/register - application/json 90
+2026-05-02 00:16:25.296 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (HR)
+2026-05-02 00:16:25.299 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-05-02 00:16:25.301 +05:30 [INF] HTTP POST /api/auth/register responded 403 in 5.4783 ms
+2026-05-02 00:16:25.305 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5299/api/auth/register - 403 0 null 15.1762ms
+2026-05-02 00:16:25.469 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5299/api/auth/register - application/json 90
+2026-05-02 00:16:25.474 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (HR)
+2026-05-02 00:16:25.475 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-05-02 00:16:25.477 +05:30 [INF] HTTP POST /api/auth/register responded 403 in 4.1266 ms
+2026-05-02 00:16:25.481 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5299/api/auth/register - 403 0 null 11.9317ms
+2026-05-02 00:16:25.672 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5299/api/auth/register - application/json 90
+2026-05-02 00:16:25.678 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (HR)
+2026-05-02 00:16:25.680 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-05-02 00:16:25.682 +05:30 [INF] HTTP POST /api/auth/register responded 403 in 4.7180 ms
+2026-05-02 00:16:25.685 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5299/api/auth/register - 403 0 null 13.1408ms
+2026-05-02 00:16:25.868 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5299/api/auth/register - application/json 90
+2026-05-02 00:16:25.874 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (HR)
+2026-05-02 00:16:25.876 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-05-02 00:16:25.879 +05:30 [INF] HTTP POST /api/auth/register responded 403 in 5.1576 ms
+2026-05-02 00:16:25.883 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5299/api/auth/register - 403 0 null 14.5566ms
+2026-05-02 00:16:28.443 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/users - null null
+2026-05-02 00:16:28.449 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (HR)
+2026-05-02 00:16:28.451 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-05-02 00:16:28.454 +05:30 [INF] HTTP GET /api/users responded 403 in 5.5481 ms
+2026-05-02 00:16:28.457 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/users - 403 0 null 14.0637ms
+2026-05-02 00:16:28.644 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/users - null null
+2026-05-02 00:16:28.649 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (HR)
+2026-05-02 00:16:28.650 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-05-02 00:16:28.653 +05:30 [INF] HTTP GET /api/users responded 403 in 4.0549 ms
+2026-05-02 00:16:28.657 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/users - 403 0 null 12.8611ms
+2026-05-02 00:16:28.821 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/users - null null
+2026-05-02 00:16:28.828 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (HR)
+2026-05-02 00:16:28.830 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-05-02 00:16:28.832 +05:30 [INF] HTTP GET /api/users responded 403 in 4.3334 ms
+2026-05-02 00:16:28.836 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/users - 403 0 null 14.4653ms
+2026-05-02 00:16:29.000 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/users - null null
+2026-05-02 00:16:29.006 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (HR)
+2026-05-02 00:16:29.008 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-05-02 00:16:29.010 +05:30 [INF] HTTP GET /api/users responded 403 in 4.5742 ms
+2026-05-02 00:16:29.014 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/users - 403 0 null 13.7445ms
+2026-05-02 00:16:30.881 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5299/api/auth/login - application/json 72
+2026-05-02 00:16:30.890 +05:30 [INF] Executing endpoint 'DockerApp.Controllers.AuthController.Login (DockerApp)'
+2026-05-02 00:16:30.912 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DockerApp.Requests.LoginRequest) on controller DockerApp.Controllers.AuthController (DockerApp).
+2026-05-02 00:16:30.992 +05:30 [INF] Login attempt for user prashant2@gmail.com
+2026-05-02 00:16:31.152 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[@__loginRequest_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`Email`, `u`.`Name`, `u`.`Password`, `u`.`Role`
+FROM `Users` AS `u`
+WHERE `u`.`Email` = @__loginRequest_Email_0
+LIMIT 1
+2026-05-02 00:16:31.873 +05:30 [INF] User prashant2@gmail.com logged in successfully
+2026-05-02 00:16:31.884 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-05-02 00:16:31.895 +05:30 [INF] Executed action DockerApp.Controllers.AuthController.Login (DockerApp) in 975.5376ms
+2026-05-02 00:16:31.898 +05:30 [INF] Executed endpoint 'DockerApp.Controllers.AuthController.Login (DockerApp)'
+2026-05-02 00:16:31.900 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 1012.7889 ms
+2026-05-02 00:16:31.913 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5299/api/auth/login - 200 null application/json; charset=utf-8 1031.8873ms
+2026-05-02 00:17:29.020 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5299/api/auth/login - application/json 65
+2026-05-02 00:17:29.033 +05:30 [INF] Executing endpoint 'DockerApp.Controllers.AuthController.Login (DockerApp)'
+2026-05-02 00:17:29.039 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DockerApp.Requests.LoginRequest) on controller DockerApp.Controllers.AuthController (DockerApp).
+2026-05-02 00:17:29.072 +05:30 [INF] Login attempt for user admin@gmail.com
+2026-05-02 00:17:29.216 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__loginRequest_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`Email`, `u`.`Name`, `u`.`Password`, `u`.`Role`
+FROM `Users` AS `u`
+WHERE `u`.`Email` = @__loginRequest_Email_0
+LIMIT 1
+2026-05-02 00:17:29.708 +05:30 [INF] User admin@gmail.com logged in successfully
+2026-05-02 00:17:29.711 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-05-02 00:17:29.714 +05:30 [INF] Executed action DockerApp.Controllers.AuthController.Login (DockerApp) in 670.4642ms
+2026-05-02 00:17:29.717 +05:30 [INF] Executed endpoint 'DockerApp.Controllers.AuthController.Login (DockerApp)'
+2026-05-02 00:17:29.719 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 693.9370 ms
+2026-05-02 00:17:29.723 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5299/api/auth/login - 200 null application/json; charset=utf-8 703.8455ms
+2026-05-02 00:17:34.406 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5299/api/auth/register - application/json 90
+2026-05-02 00:17:34.412 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (HR)
+2026-05-02 00:17:34.414 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-05-02 00:17:34.417 +05:30 [INF] HTTP POST /api/auth/register responded 403 in 5.7252 ms
+2026-05-02 00:17:34.421 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5299/api/auth/register - 403 0 null 14.5441ms
+2026-05-02 00:17:38.069 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5299/api/auth/register - application/json 90
+2026-05-02 00:17:38.075 +05:30 [INF] Executing endpoint 'DockerApp.Controllers.AuthController.Register (DockerApp)'
+2026-05-02 00:17:38.081 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(DockerApp.DTO.RegisterDTO) on controller DockerApp.Controllers.AuthController (DockerApp).
+2026-05-02 00:17:38.099 +05:30 [INF] Registration attempt for prashant23@gmail.com
+2026-05-02 00:17:38.113 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__registerDTO_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`Email`, `u`.`Name`, `u`.`Password`, `u`.`Role`
+FROM `Users` AS `u`
+WHERE `u`.`Email` = @__registerDTO_Email_0
+LIMIT 1
+2026-05-02 00:17:38.118 +05:30 [WRN] Registration failed: User already exists prashant23@gmail.com
+2026-05-02 00:17:38.121 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-05-02 00:17:38.126 +05:30 [INF] Executed action DockerApp.Controllers.AuthController.Register (DockerApp) in 41.0557ms
+2026-05-02 00:17:38.129 +05:30 [INF] Executed endpoint 'DockerApp.Controllers.AuthController.Register (DockerApp)'
+2026-05-02 00:17:38.132 +05:30 [INF] HTTP POST /api/auth/register responded 400 in 57.8572 ms
+2026-05-02 00:17:38.137 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5299/api/auth/register - 400 null text/plain; charset=utf-8 67.3608ms
+2026-05-02 00:17:44.092 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5299/api/auth/register - application/json 92
+2026-05-02 00:17:44.097 +05:30 [INF] Executing endpoint 'DockerApp.Controllers.AuthController.Register (DockerApp)'
+2026-05-02 00:17:44.100 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(DockerApp.DTO.RegisterDTO) on controller DockerApp.Controllers.AuthController (DockerApp).
+2026-05-02 00:17:44.114 +05:30 [INF] Registration attempt for prashant213@gmail.com
+2026-05-02 00:17:44.118 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__registerDTO_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`Email`, `u`.`Name`, `u`.`Password`, `u`.`Role`
+FROM `Users` AS `u`
+WHERE `u`.`Email` = @__registerDTO_Email_0
+LIMIT 1
+2026-05-02 00:17:44.463 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Users` (`Email`, `Name`, `Password`, `Role`)
+VALUES (@p0, @p1, @p2, @p3);
+SELECT `Id`
+FROM `Users`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2026-05-02 00:17:44.495 +05:30 [INF] User prashant213@gmail.com registered successfully with role Employee
+2026-05-02 00:17:44.498 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-05-02 00:17:44.504 +05:30 [INF] Executed action DockerApp.Controllers.AuthController.Register (DockerApp) in 401.43ms
+2026-05-02 00:17:44.507 +05:30 [INF] Executed endpoint 'DockerApp.Controllers.AuthController.Register (DockerApp)'
+2026-05-02 00:17:44.509 +05:30 [INF] HTTP POST /api/auth/register responded 200 in 412.4934 ms
+2026-05-02 00:17:44.512 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5299/api/auth/register - 200 null application/json; charset=utf-8 420.7472ms
+2026-05-02 00:36:06.249 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5299/api/auth/login - null null
+2026-05-02 00:36:06.255 +05:30 [INF] CORS policy execution successful.
+2026-05-02 00:36:06.261 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5299/api/auth/login - 204 null null 11.7932ms
+2026-05-02 00:36:06.268 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5299/api/auth/login - application/json 58
+2026-05-02 00:36:06.274 +05:30 [INF] CORS policy execution successful.
+2026-05-02 00:36:06.276 +05:30 [INF] Executing endpoint 'DockerApp.Controllers.AuthController.Login (DockerApp)'
+2026-05-02 00:36:06.278 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DockerApp.Requests.LoginRequest) on controller DockerApp.Controllers.AuthController (DockerApp).
+2026-05-02 00:36:06.313 +05:30 [INF] Login attempt for user prashant213@gmail.com
+2026-05-02 00:36:06.332 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__loginRequest_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`Email`, `u`.`Name`, `u`.`Password`, `u`.`Role`
+FROM `Users` AS `u`
+WHERE `u`.`Email` = @__loginRequest_Email_0
+LIMIT 1
+2026-05-02 00:36:06.539 +05:30 [INF] User prashant213@gmail.com logged in successfully
+2026-05-02 00:36:06.541 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-05-02 00:36:06.543 +05:30 [INF] Executed action DockerApp.Controllers.AuthController.Login (DockerApp) in 262.837ms
+2026-05-02 00:36:06.545 +05:30 [INF] Executed endpoint 'DockerApp.Controllers.AuthController.Login (DockerApp)'
+2026-05-02 00:36:06.546 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 269.9163 ms
+2026-05-02 00:36:06.548 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5299/api/auth/login - 200 null application/json; charset=utf-8 280.4518ms
+2026-05-02 00:36:06.611 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5299/api/auth/me - null null
+2026-05-02 00:36:06.616 +05:30 [INF] CORS policy execution successful.
+2026-05-02 00:36:06.618 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5299/api/auth/me - 204 null null 7.2946ms
+2026-05-02 00:36:06.622 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/auth/me - null null
+2026-05-02 00:36:06.626 +05:30 [INF] CORS policy execution successful.
+2026-05-02 00:36:06.628 +05:30 [INF] HTTP GET /api/auth/me responded 404 in 0.5818 ms
+2026-05-02 00:36:06.631 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/auth/me - 404 0 null 9.0074ms
+2026-05-02 00:36:06.637 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5299/api/auth/me, Response status code: 404
+2026-05-02 00:36:06.640 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/auth/me - null null
+2026-05-02 00:36:06.641 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5299/api/users/me - null null
+2026-05-02 00:36:06.646 +05:30 [INF] CORS policy execution successful.
+2026-05-02 00:36:06.649 +05:30 [INF] CORS policy execution successful.
+2026-05-02 00:36:06.650 +05:30 [INF] HTTP GET /api/auth/me responded 404 in 0.2457 ms
+2026-05-02 00:36:06.651 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5299/api/users/me - 204 null null 10.5227ms
+2026-05-02 00:36:06.654 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/auth/me - 404 0 null 13.7341ms
+2026-05-02 00:36:06.658 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/users/me - null null
+2026-05-02 00:36:06.663 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5299/api/auth/me, Response status code: 404
+2026-05-02 00:36:06.665 +05:30 [INF] CORS policy execution successful.
+2026-05-02 00:36:06.669 +05:30 [INF] HTTP GET /api/users/me responded 404 in 0.2390 ms
+2026-05-02 00:36:06.671 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/users/me - 404 0 null 13.1897ms
+2026-05-02 00:36:06.672 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/users/me - null null
+2026-05-02 00:36:06.675 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5299/api/users/me, Response status code: 404
+2026-05-02 00:36:06.678 +05:30 [INF] CORS policy execution successful.
+2026-05-02 00:36:06.680 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5299/api/employees/me - null null
+2026-05-02 00:36:06.682 +05:30 [INF] HTTP GET /api/users/me responded 404 in 0.2899 ms
+2026-05-02 00:36:06.684 +05:30 [INF] CORS policy execution successful.
+2026-05-02 00:36:06.686 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/users/me - 404 0 null 14.6801ms
+2026-05-02 00:36:06.688 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5299/api/employees/me - 204 null null 7.2169ms
+2026-05-02 00:36:06.692 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5299/api/users/me, Response status code: 404
+2026-05-02 00:36:06.697 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/employees/me - null null
+2026-05-02 00:36:06.717 +05:30 [INF] CORS policy execution successful.
+2026-05-02 00:36:06.719 +05:30 [INF] HTTP GET /api/employees/me responded 404 in 0.3446 ms
+2026-05-02 00:36:06.721 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/employees/me - 404 0 null 24.4647ms
+2026-05-02 00:36:06.722 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/employees/me - null null
+2026-05-02 00:36:06.726 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5299/api/employees/me, Response status code: 404
+2026-05-02 00:36:06.730 +05:30 [INF] CORS policy execution successful.
+2026-05-02 00:36:06.732 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5299/api/profile - null null
+2026-05-02 00:36:06.733 +05:30 [INF] HTTP GET /api/employees/me responded 404 in 0.3320 ms
+2026-05-02 00:36:06.735 +05:30 [INF] CORS policy execution successful.
+2026-05-02 00:36:06.737 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/employees/me - 404 0 null 15.1728ms
+2026-05-02 00:36:06.738 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5299/api/profile - 204 null null 6.6384ms
+2026-05-02 00:36:06.742 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5299/api/employees/me, Response status code: 404
+2026-05-02 00:36:06.745 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/profile - null null
+2026-05-02 00:36:06.750 +05:30 [INF] CORS policy execution successful.
+2026-05-02 00:36:06.751 +05:30 [INF] HTTP GET /api/profile responded 404 in 0.2461 ms
+2026-05-02 00:36:06.753 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/profile - 404 0 null 8.4011ms
+2026-05-02 00:36:06.754 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/profile - null null
+2026-05-02 00:36:06.757 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5299/api/profile, Response status code: 404
+2026-05-02 00:36:06.759 +05:30 [INF] CORS policy execution successful.
+2026-05-02 00:36:06.762 +05:30 [INF] HTTP GET /api/profile responded 404 in 0.2142 ms
+2026-05-02 00:36:06.764 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/profile - 404 0 null 9.9124ms
+2026-05-02 00:36:06.768 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5299/api/profile, Response status code: 404
+2026-05-02 00:36:12.919 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5299/api/auth/me - null null
+2026-05-02 00:36:12.923 +05:30 [INF] CORS policy execution successful.
+2026-05-02 00:36:12.925 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5299/api/auth/me - 204 null null 5.8318ms
+2026-05-02 00:36:12.929 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/auth/me - null null
+2026-05-02 00:36:12.933 +05:30 [INF] CORS policy execution successful.
+2026-05-02 00:36:12.934 +05:30 [INF] HTTP GET /api/auth/me responded 404 in 0.2537 ms
+2026-05-02 00:36:12.936 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/auth/me - 404 0 null 7.0949ms
+2026-05-02 00:36:12.940 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5299/api/auth/me, Response status code: 404
+2026-05-02 00:36:12.943 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5299/api/users/me - null null
+2026-05-02 00:36:12.945 +05:30 [INF] CORS policy execution successful.
+2026-05-02 00:36:12.946 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5299/api/users/me - 204 null null 3.6244ms
+2026-05-02 00:36:12.950 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/users/me - null null
+2026-05-02 00:36:12.952 +05:30 [INF] CORS policy execution successful.
+2026-05-02 00:36:12.953 +05:30 [INF] HTTP GET /api/users/me responded 404 in 0.2090 ms
+2026-05-02 00:36:12.955 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/users/me - 404 0 null 5.7981ms
+2026-05-02 00:36:12.966 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5299/api/users/me, Response status code: 404
+2026-05-02 00:36:12.968 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5299/api/employees/me - null null
+2026-05-02 00:36:12.971 +05:30 [INF] CORS policy execution successful.
+2026-05-02 00:36:12.972 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5299/api/employees/me - 204 null null 4.0638ms
+2026-05-02 00:36:12.976 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/employees/me - null null
+2026-05-02 00:36:12.979 +05:30 [INF] CORS policy execution successful.
+2026-05-02 00:36:12.980 +05:30 [INF] HTTP GET /api/employees/me responded 404 in 0.2668 ms
+2026-05-02 00:36:12.983 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/employees/me - 404 0 null 6.5373ms
+2026-05-02 00:36:12.986 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5299/api/employees/me, Response status code: 404
+2026-05-02 00:36:12.988 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5299/api/profile - null null
+2026-05-02 00:36:12.991 +05:30 [INF] CORS policy execution successful.
+2026-05-02 00:36:12.992 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5299/api/profile - 204 null null 3.5993ms
+2026-05-02 00:36:12.995 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5299/api/profile - null null
+2026-05-02 00:36:12.999 +05:30 [INF] CORS policy execution successful.
+2026-05-02 00:36:13.000 +05:30 [INF] HTTP GET /api/profile responded 404 in 0.3277 ms
+2026-05-02 00:36:13.002 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5299/api/profile - 404 0 null 7.0354ms
+2026-05-02 00:36:13.007 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5299/api/profile, Response status code: 404
+2026-05-02 00:45:01.568 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5299/api/auth/login - null null
+2026-05-02 00:45:01.572 +05:30 [INF] CORS policy execution successful.
+2026-05-02 00:45:01.574 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5299/api/auth/login - 204 null null 5.3607ms
+2026-05-02 00:45:01.578 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5299/api/auth/login - application/json 58
+2026-05-02 00:45:01.581 +05:30 [INF] CORS policy execution successful.
+2026-05-02 00:45:01.583 +05:30 [INF] Executing endpoint 'DockerApp.Controllers.AuthController.Login (DockerApp)'
+2026-05-02 00:45:01.585 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DockerApp.Requests.LoginRequest) on controller DockerApp.Controllers.AuthController (DockerApp).
+2026-05-02 00:45:01.612 +05:30 [INF] Login attempt for user prashant213@gmail.com
+2026-05-02 00:45:01.628 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__loginRequest_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`Email`, `u`.`Name`, `u`.`Password`, `u`.`Role`
+FROM `Users` AS `u`
+WHERE `u`.`Email` = @__loginRequest_Email_0
+LIMIT 1
+2026-05-02 00:45:01.833 +05:30 [INF] User prashant213@gmail.com logged in successfully
+2026-05-02 00:45:01.835 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-05-02 00:45:01.837 +05:30 [INF] Executed action DockerApp.Controllers.AuthController.Login (DockerApp) in 248.8196ms
+2026-05-02 00:45:01.838 +05:30 [INF] Executed endpoint 'DockerApp.Controllers.AuthController.Login (DockerApp)'
+2026-05-02 00:45:01.839 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 256.6438 ms
+2026-05-02 00:45:01.842 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5299/api/auth/login - 200 null application/json; charset=utf-8 263.4658ms
+2026-05-02 16:51:58.290 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-05-02 16:51:58.394 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT GET_LOCK('__MyAppDb_EFMigrationsLock', 259200)
+2026-05-02 16:51:58.559 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS `__EFMigrationsHistory` (
+    `MigrationId` varchar(150) CHARACTER SET utf8mb4 NOT NULL,
+    `ProductVersion` varchar(32) CHARACTER SET utf8mb4 NOT NULL,
+    CONSTRAINT `PK___EFMigrationsHistory` PRIMARY KEY (`MigrationId`)
+) CHARACTER SET=utf8mb4;
+2026-05-02 16:51:58.622 +05:30 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='MyAppDb' AND TABLE_NAME='__EFMigrationsHistory';
+2026-05-02 16:51:58.631 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `MigrationId`, `ProductVersion`
+FROM `__EFMigrationsHistory`
+ORDER BY `MigrationId`;
+2026-05-02 16:51:58.649 +05:30 [INF] No migrations were applied. The database is already up to date.
+2026-05-02 16:51:58.658 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT RELEASE_LOCK('__MyAppDb_EFMigrationsLock')
+2026-05-02 16:51:59.028 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM `Users` AS `u`
+    WHERE `u`.`Role` = 'HR')
+2026-05-02 16:51:59.091 +05:30 [INF] User profile is available. Using 'C:\Users\hgf\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-05-02 16:51:59.373 +05:30 [INF] Now listening on: https://localhost:7233
+2026-05-02 16:51:59.374 +05:30 [INF] Now listening on: http://localhost:5299
+2026-05-02 16:51:59.472 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-02 16:51:59.474 +05:30 [INF] Hosting environment: Development
+2026-05-02 16:51:59.475 +05:30 [INF] Content root path: C:\Users\hgf\Desktop\Study\DockerApp\backend
+2026-05-02 16:54:01.715 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5299/api/auth/login - null null
+2026-05-02 16:54:01.788 +05:30 [INF] CORS policy execution successful.
+2026-05-02 16:54:01.809 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5299/api/auth/login - 204 null null 113.1172ms
+2026-05-02 16:54:01.820 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5299/api/auth/login - application/json 56
+2026-05-02 16:54:01.832 +05:30 [INF] CORS policy execution successful.
+2026-05-02 16:54:01.922 +05:30 [INF] Executing endpoint 'DockerApp.Controllers.AuthController.Login (DockerApp)'
+2026-05-02 16:54:01.972 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DockerApp.Requests.LoginRequest) on controller DockerApp.Controllers.AuthController (DockerApp).
