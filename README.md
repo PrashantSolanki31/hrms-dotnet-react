@@ -160,6 +160,18 @@ HRMS Project
 │   ├── Dockerfile (API)
 │
 └── Redis Cache Layer
+
+This project supports two modes:
+
+1. Local Development Mode (Current)
+   - Runs without Docker
+   - MySQL local setup
+   - Redis removed
+
+2. Docker Mode (Legacy / Architecture Demo)
+   - Previously implemented full containerized setup
+   - Requires some config changes in code
+
 📚 Concepts Demonstrated
 REST API Development
 JWT Authentication & Authorization
