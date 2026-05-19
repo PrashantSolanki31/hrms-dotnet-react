@@ -29,7 +29,7 @@ namespace DockerApp.Controllers
         {
             string cacheKey = "users:all";
 
-           // 1.CHECK CACHE
+           // 1.CHECK CACHE*
            var cachedData = await _redis.GetAsync(cacheKey);
 
             if (!string.IsNullOrEmpty(cachedData))
