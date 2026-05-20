@@ -8,8 +8,23 @@ public class RedisService
 
     public RedisService(IConfiguration config)
     {
-        var redis = ConnectionMultiplexer.Connect(config["Redis:Connection"]);
+        var redisConnection =
+     Environment.GetEnvironmentVariable("REDIS_CONNECTION")
+     ?? "localhost:6379";
+
+        if (string.IsNullOrEmpty(redisConnection))
+            throw new Exception("REDIS_CONNECTION missing");
+
+        if (string.IsNullOrEmpty(redisConnection))
+            throw new Exception("Redis connection is missing");
+
+        var options = ConfigurationOptions.Parse(redisConnection);
+        options.AbortOnConnectFail = false;
+        options.ConnectRetry = 5;
+
+        var redis = ConnectionMultiplexer.Connect(options);
         _cache = redis.GetDatabase();
+      
     }
 
     public async Task<string?> GetAsync(string key)
